@@ -1,3 +1,4 @@
+import React from 'react'
 import BasePage from './BasePage'
 import Layout from '../components/Layout'
 

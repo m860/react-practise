@@ -8,26 +8,40 @@ const routes = [{
 		let module = await System.import("../pages/404.js");
 		callback(null, module.default);
 	},
-	name:"404"
+	name: "404"
 }];
 
-if(process.env['NODE_ENV']==="development"){
-	function displayRoute(route,parentPath) {
-		let path=`/${route.path}`;
-		if(parentPath){
-			path=parentPath+path;
+export function getDefinedPaths() {
+	let paths = [];
+
+	function displayRoute(route, parentPath) {
+		let path = `/${route.path}`;
+		if (parentPath) {
+			path = parentPath + path;
 		}
-		if(route.indexRoute){
-			console.log(`${route.indexRoute.name} : ${path}`);
+		if (route.indexRoute) {
+			paths.push({
+				name:route.indexRoute.name,
+				url:path
+			});
 		}
-		if(route.childRoutes){
-			route.childRoutes.forEach(r=>displayRoute(r,path))
+		if (route.childRoutes) {
+			route.childRoutes.forEach(r=>displayRoute(r, path))
 		}
-		if(route.name){
-			console.log(`${route.name} : ${path}`);
+		if (route.name) {
+			paths.push({
+				name:route.name,
+				url:path
+			});
 		}
 	}
+
 	routes.forEach(r=>displayRoute(r));
+	return paths;
+}
+
+if (process.env['NODE_ENV'] === "development") {
+	getDefinedPaths().forEach(p=>console.log(`${p.name}:${p.url}`));
 }
 
 export default routes
