@@ -1,5 +1,7 @@
-import BaseComponent from "./BaseComponent.js"
-import PropTypes from 'prop-types'
+import React from "react";
+import BaseComponent from "./BaseComponent.js";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 export default class Layout extends BaseComponent {
 	static propTypes = {
@@ -9,7 +11,6 @@ export default class Layout extends BaseComponent {
 
 	get _props() {
 		let props = Object.assign({}, this.props);
-		delete props.children;
 		props.className = classNames("layout", props.className);
 		return props;
 	}
@@ -17,7 +18,9 @@ export default class Layout extends BaseComponent {
 	render() {
 		return (
 			<div {...this._props}>
-				{this.props.children}
+				<div className="container">
+					{this.props.children}
+				</div>
 			</div>
 		);
 	}

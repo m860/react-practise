@@ -1,22 +1,17 @@
-import 'normalize-css/normalize.css'
-import "./assets/sass/app.sass"
-import {
-	Router
-	, Route
-	, hashHistory
-	, IndexRoute
-} from "react-router";
-import routes from './config/routes.config'
-import appConfig from "config"
-import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
-import {createStore, applyMiddleware, compose} from 'redux'
-import {Provider} from 'react-redux'
-import reducers from './ar'
-import thunk from 'redux-thunk'
-import React, {PureComponent} from 'react'
-import './config/axios.config'
-import {persistStore, autoRehydrate} from 'redux-persist'
-import PropTypes from 'prop-types'
+import "materialize-css/dist/css/materialize.min.css"
+import "./assets/sass/app.sass";
+import {Router, Route, hashHistory, IndexRoute} from "react-router";
+import routes from "./config/routes.config";
+import appConfig from "config";
+import ReactCSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
+import {createStore, applyMiddleware, compose} from "redux";
+import {Provider} from "react-redux";
+import reducers from "./ar";
+import thunk from "redux-thunk";
+import React, {PureComponent} from "react";
+import ReactDOM from 'react-dom'
+import "./config/axios.config";
+import {persistStore, autoRehydrate} from "redux-persist";
 
 export const store = createStore(
 	reducers,

@@ -1,29 +1,5 @@
-export default class BaseComponent extends React.PureComponent{
-	constructor(props) {
-		super(props);
-		this._mounted = false;
-	}
+import React from 'react';
+import Base from '../Base'
 
-	componentDidMount() {
-		this._mounted = true;
-	}
-
-	componentWillUnmount() {
-		this._mounted = false;
-	}
-
-	updateState(changedState, callback) {
-		if (this.state && this._mounted) {
-			this.setState(
-				$update(this.state, changedState),
-				callback
-			);
-		}
-	}
-
-	setState2(state, callback) {
-		if (this._mounted) {
-			this.setState(state, callback);
-		}
-	}
+export default class BaseComponent extends Base{
 }

@@ -61,6 +61,7 @@
     "guid": "0.0.12",
     "immutability-helper": "^2.1.2",
     "jsplumb": "^2.4.3",
+    "materialize-css": "^0.100.1",
     "normalize-css": "^2.3.1",
     "object-hash": "^1.1.8",
     "pixi.js": "^4.4.4",
