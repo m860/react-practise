@@ -57,6 +57,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "classnames": "^2.2.4",
+    "d3": "^4.10.0",
     "font-awesome": "^4.7.0",
     "guid": "0.0.12",
     "immutability-helper": "^2.1.2",

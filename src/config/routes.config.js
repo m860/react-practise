@@ -3,6 +3,27 @@
  */
 
 const routes = [{
+	path: 'barchartwithsvg',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/BarChartWithSVG.js");
+		callback(null, module.default);
+	},
+	name: "bar chart with svg"
+},{
+	path: 'barchart',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/LessonBarChart.js");
+		callback(null, module.default);
+	},
+	name: "bar chart"
+},{
+	path: 'hello',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/LessonHello.js");
+		callback(null, module.default);
+	},
+	name: "Hello"
+},{
 	path: '404',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/404.js");
