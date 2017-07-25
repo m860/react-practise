@@ -3,6 +3,13 @@
  */
 
 const routes = [{
+	path: 'animationbarchart',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/AnimationBarChart.js");
+		callback(null, module.default);
+	},
+	name: "animation bar chart"
+},{
 	path: 'standardbarchartwithsvg',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/BarChartWithSVG2.js");
