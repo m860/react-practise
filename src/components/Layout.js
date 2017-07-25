@@ -7,7 +7,7 @@ export default class Layout extends BaseComponent {
 		let props = Object.assign({}, this.props);
 		props.className = classNames("layout", props.className);
 		return (
-			<div {...this._props}>
+			<div {...props}>
 				{this.props.children}
 			</div>
 		);
