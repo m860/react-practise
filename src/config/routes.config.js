@@ -8,7 +8,7 @@ const routes = [{
 		let module = await System.import("../pages/BarChartWithSVG2.js");
 		callback(null, module.default);
 	},
-	name: "standard bar chart with svg"
+	name: "bar chart include axis with svg"
 },{
 	path: 'barchartwithsvg',
 	getComponent: async(location, callback)=> {
