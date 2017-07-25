@@ -28,7 +28,7 @@ export default class Index extends BasePage {
 	render() {
 		return (
 			<Layout>
-				<Nav></Nav>
+				<Nav title="D3JS Demos"></Nav>
 				{this.renderPaths()}
 			</Layout>
 		);
