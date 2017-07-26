@@ -3,6 +3,13 @@
  */
 
 const routes = [{
+	path: 'updatebarchartdata',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/UpdateBarChartData.js");
+		callback(null, module.default);
+	},
+	name: "update bar chart data"
+},{
 	path: 'animationbarchart',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/AnimationBarChart.js");
