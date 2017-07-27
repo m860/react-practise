@@ -9,17 +9,14 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 if (!process.env['NODE_ENV']) {
 	process.env['NODE_ENV'] = 'development';
 }
-if (!process.env['TARGET']) {
-	process.env['TARGET'] = 'development';
-}
+
 
 console.log('==============================');
 console.log('NODE_ENV:' + process.env['NODE_ENV']);
-console.log('TARGET:' + process.env['TARGET']);
 console.log('==============================');
 
 var isProduction = function () {
-	return process.env['NODE_ENV'] === 'production';
+	return process.env['NODE_ENV'] !== 'development';
 };
 
 var plugins = [
@@ -131,7 +128,7 @@ module.exports = {
 	plugins: plugins,
 	resolve: {
 		alias: {
-			config: path.join(__dirname, 'src/config/app.' + process.env['TARGET'] + '.config.js')
+			config: path.join(__dirname, 'src/config/app.' + process.env['NODE_ENV'] + '.config.js')
 		}
 	}
 }
