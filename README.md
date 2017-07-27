@@ -1,4 +1,4 @@
-# React Basic
+# React Practise
 
 ## common guideline
 
@@ -46,4 +46,3 @@
 ## TODO
 
 - [ ] 添加flow语法检查
-- [ ] persist redux 可配置
