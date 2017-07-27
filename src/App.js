@@ -1,4 +1,5 @@
 import "materialize-css/dist/css/materialize.min.css"
+import "font-awesome/css/font-awesome.min.css"
 import "./assets/sass/app.sass";
 import {Router, Route, hashHistory, IndexRoute} from "react-router";
 import routes from "./config/routes.config";
