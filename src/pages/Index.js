@@ -28,7 +28,7 @@ export default class Index extends BasePage {
 	render() {
 		return (
 			<Layout>
-				<Nav title="React Basic"></Nav>
+				<Nav></Nav>
 				{this.renderPaths()}
 			</Layout>
 		);

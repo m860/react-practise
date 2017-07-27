@@ -85,9 +85,11 @@ module.exports = {
 					"babel-loader",
 					{
 						loader: "eslint-loader",
+						/*
 						options: {
 							configFile: isProduction() ? path.resolve(__dirname, ".eslintrc") : path.resolve(__dirname, ".dev.eslintrc")
 						}
+						*/
 					}
 				],
 				exclude: [
