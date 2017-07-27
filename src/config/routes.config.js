@@ -3,6 +3,13 @@
  */
 
 const routes = [{
+	path: 'simpledatatable',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/SimpleDataTable.js");
+		callback(null, module.default);
+	},
+	name: "Simple DataTable"
+},{
 	path: '404',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/404.js");
