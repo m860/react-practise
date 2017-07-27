@@ -46,3 +46,4 @@
 ## TODO
 
 - [ ] 添加flow语法检查
+- [ ] Add detect browser support

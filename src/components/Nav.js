@@ -3,6 +3,7 @@ import BaseComponent from "./BaseComponent.js";
 import PropTypes from "prop-types";
 import config from 'config'
 
+
 export default class Nav extends BaseComponent {
 	static propTypes = {
 		title: PropTypes.string
