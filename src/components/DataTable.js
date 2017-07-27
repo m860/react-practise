@@ -34,7 +34,7 @@ export default class DataTable extends BaseComponent {
 							return (
 								<td key={columnIndex}
 									className={column.className}
-									style={column.style}>{column.render(rowData, column, columnIndex)}</td>
+									style={column.style}>{column.render(rowData, rowDataIndex,column, columnIndex)}</td>
 							);
 						})}
 					</tr>
