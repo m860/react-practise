@@ -109,7 +109,12 @@ module.exports = {
 				})
 			}, {
 				test: /\.css$/,
-				loader: ["style-loader", "css-loader"]
+				loader: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: [{
+						loader: "css-loader"
+					}]
+				})
 			}, {
 				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				loader: isProduction() ? "file-loader" : "file-loader?name=[name].[ext]"
