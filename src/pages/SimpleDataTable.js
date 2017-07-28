@@ -5,7 +5,7 @@ import React from "react";
 import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNav";
 import {Link} from "react-router";
-import DataTable from "../components/DataTable";
+import DataTable from "../components/meta/DataTable";
 
 export default class SimpleDataTable extends BasePage {
 	constructor(props) {

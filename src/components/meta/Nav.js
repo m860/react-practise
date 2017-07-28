@@ -1,5 +1,5 @@
 import React from "react";
-import BaseComponent from "./BaseComponent.js";
+import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
 import config from 'config'
 

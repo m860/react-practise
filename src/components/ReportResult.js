@@ -3,7 +3,7 @@
  */
 import BaseComponent from './BaseComponent'
 import PropsTypes from 'prop-types'
-import DataTable from './DataTable'
+import DataTable from './meta/DataTable'
 import inputs from './inputs'
 import axios from 'axios'
 import {$error} from '../App'

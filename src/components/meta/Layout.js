@@ -1,5 +1,5 @@
 import React from "react";
-import BaseComponent from "./BaseComponent.js";
+import BaseComponent from "../BaseComponent.js";
 import classNames from "classnames";
 
 export default class Layout extends BaseComponent {
