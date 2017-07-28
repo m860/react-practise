@@ -43,7 +43,54 @@
     $ npm run dev
     ```
 
+## component
+
+### Nav
+
+#### props
+
+##### title:?String="TITLE"
+标题,.可以在`app.ENV.config.js`中进行全局配置
+
+##### renderLogo:?Function=()=>null
+render logo,需要返回一个React Node对象,可以在`app.ENV.config.js`中进行全局配置
+
+### DataTable
+
+#### props
+
+##### columns:Object
+```javascript
+type ColumnType={
+	name:String,
+	className:?String,
+	style:?Object,
+	//@desc render函数包含4个参数,依次是rowData,rowIndex,column,columnIndex
+	//@return String|HTML Element|React Node
+	render:Function
+};
+```
+name和render是必须提供.name设置列的名称,render设置列的样式和数据.
+```javascript
+//Example1 
+//render直接返回数据
+const columns=[{
+    name: "Name",
+    render: (rowData)=>rowData['name']
+}]
+
+//Example2
+//render返回一个Element
+const columns=[{
+    name: "Name",
+    render: (rowData)=>(<span>{rowData['name']}</span>)
+}]
+```
+##### dataSource:?Array=[]
+##### style:?Object={}
+##### className:?String="striped"
+##### renderDataEmpty:?Function
+
 ## TODO
 
 - [ ] 添加flow语法检查
-- [ ] Add detect browser support

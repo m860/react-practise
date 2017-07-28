@@ -6,25 +6,33 @@ import config from 'config'
 
 export default class Nav extends BaseComponent {
 	static propTypes = {
-		title: PropTypes.string
+		title: PropTypes.string,
+		renderLogo:PropTypes.func
 	};
 	static defaultProps = {
 	};
 
 	render() {
-		let title='LOGO';
+		let title='TITLE';
 		if(this.props.title){
 			title=this.props.title;
 		}
 		else if(config.navOptions && config.navOptions.title){
 			title=config.navOptions.title;
 		}
+		let renderLogo=()=>null;
+		if(this.props.renderLogo){
+			renderLogo=this.props.renderLogo;
+		}
+		else if(config.navOptions && config.navOptions.renderLogo){
+			renderLogo=config.navOptions.renderLogo;
+		}
 		return (
 			<nav>
 				<div>
-					<a className="logo">
-						<i className="fa fa-bug fa-2x"></i>
-					</a>
+					<div className="logo">
+						{renderLogo()}
+					</div>
 					{title}
 				</div>
 			</nav>

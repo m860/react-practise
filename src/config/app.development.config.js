@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
 	// 启动页
 	index: ()=> {
@@ -8,7 +10,8 @@ export default {
 	},
 	// Nav 全局配置
 	navOptions: {
-		title: "React Practise"
+		title: "React Practise",
+		renderLogo:()=>(<i className="fa fa-bug fa-2x"></i>)
 	},
 	// 版本
 	version: "1.1.0",
