@@ -91,6 +91,33 @@ const columns=[{
 ##### className:?String="striped"
 ##### renderDataEmpty:?Function
 
+### Pagination
+
+#### props
+
+##### startPageNumber:?Number=0
+设置起始分页位置,0或者1开始分页
+
+##### pageIndex:?Number=0
+##### pageSize:?Number=10
+##### onPageChange:Function
+onPageChange包含一个参数
+```type
+{
+  pageIndex:Number,
+  pageSize:Number,
+  startPageNumber:Number
+}
+```
+
+##### total:Number
+总记录数
+
+##### style:?Object
+##### className:?String
+##### displayPageCount:?Number=5
+显示的页码的个数
+
 ## TODO
 
 - [ ] 添加flow语法检查
