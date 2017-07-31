@@ -122,4 +122,9 @@ export default class Pagination extends BaseComponent {
 			</ul>
 		);
 	}
+
+	// componentDidMount(){
+	// 	super.componentDidMount();
+	// 	this.props.onPageChange(Object.assign({},this.state));
+	// }
 }

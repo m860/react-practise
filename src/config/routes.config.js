@@ -3,6 +3,13 @@
  */
 
 const routes = [{
+	path: 'pagingdatatable',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/PagingDataTable.js");
+		callback(null, module.default);
+	},
+	name: "pagingdatatable"
+},{
 	path: 'paginationdemo',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/PaginationDemo.js");

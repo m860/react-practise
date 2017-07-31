@@ -8,10 +8,10 @@ import PropTypes from "prop-types";
 export default class DataTable extends BaseComponent {
 	static propTypes = {
 		columns: PropTypes.arrayOf(PropTypes.shape({
-			name: PropTypes.string,
+			name: PropTypes.string.isRequired,
 			className: PropTypes.any,
 			style: PropTypes.object,
-			render: PropTypes.func
+			render: PropTypes.func.isRequired
 		})).isRequired,
 		dataSource: PropTypes.array,
 		style: PropTypes.object,
