@@ -118,6 +118,15 @@ onPageChange包含一个参数
 ##### displayPageCount:?Number=5
 显示的页码的个数
 
+### DataTableWithPagination
+
+#### props
+
+#### [...DataTable.propTypes](#DataTable)
+#### [...Pagination.propTypes](#Pagination)
+##### style:?Object
+##### className:?String
+
 ## TODO
 
 - [ ] 添加flow语法检查
