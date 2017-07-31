@@ -2,9 +2,9 @@
  * Created by jean.h.ma on 5/9/17.
  */
 import React from "react";
-import BaseComponent from "./BaseComponent";
-import DataTable from "./meta/DataTable";
-import Pagination from "./meta/Pagination";
+import BaseComponent from "../BaseComponent";
+import DataTable from "./DataTable";
+import Pagination from "./Pagination";
 import PropTypes from 'prop-types'
 
 export default class DataTableWithPagination extends BaseComponent {

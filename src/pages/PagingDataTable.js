@@ -4,7 +4,7 @@
 import React from "react";
 import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNav";
-import DataTableWithPagination from "../components/DataTableWithPagination";
+import DataTableWithPagination from "../components/meta/DataTableWithPagination";
 
 export default class PagingDataTable extends BasePage {
 	constructor(props) {

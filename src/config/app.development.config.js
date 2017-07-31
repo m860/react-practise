@@ -11,7 +11,11 @@ export default {
 	// Nav 全局配置
 	navOptions: {
 		title: "React Practise",
-		renderLogo:()=>(<i className="fa fa-bug fa-2x"></i>)
+		logo:(
+			<div className="logo">
+				<i className="fa fa-bug fa-2x"></i>
+			</div>
+		)
 	},
 	// 版本
 	version: "1.1.0",

@@ -3,13 +3,14 @@ import BaseComponent from "./BaseComponent.js";
 import Nav from './meta/Nav'
 import Layout from './meta/Layout'
 import PropTypes from 'prop-types'
+import config from 'config'
 
 export default class LayoutWithNav extends BaseComponent {
 	static propTypes={
 		navOptions:PropTypes.object
 	};
 	static defaultProps={
-		navOptions:{}
+		navOptions:config.navOptions
 	};
 	render() {
 		return (
