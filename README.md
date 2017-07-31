@@ -122,8 +122,8 @@ onPageChange包含一个参数
 
 #### props
 
-#### [...DataTable.propTypes](#DataTable)
-#### [...Pagination.propTypes](#Pagination)
+#### [...DataTable.propTypes](#datatable)
+#### [...Pagination.propTypes](#pagination)
 ##### style:?Object
 ##### className:?String
 
