@@ -17,8 +17,8 @@ export default class SimpleDataTable extends BasePage {
 		return function () {
 			return (
 				<div className="panel-right-button">
-					<button type="button" className="primary">button1</button>
-					<button type="button">button2</button>
+					<button type="button" className="pure-button pure-button-primary">button1</button>
+					<button type="button" className="pure-button">button2</button>
 				</div>
 			);
 		}

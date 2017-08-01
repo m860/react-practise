@@ -90,7 +90,7 @@ export default class Pagination extends BaseComponent {
 						},()=>{
 							this.props.onPageChange(Object.assign({},this.state));
 						})
-					}} href="javascript:void(0)">&lt;</a>
+					}} href="javascript:void(0)"><i className="fa fa-angle-left"></i></a>
 				</li>
 				{hasLeft && <li>...</li>}
 				{displayPages.map((num, i)=> {
@@ -117,7 +117,7 @@ export default class Pagination extends BaseComponent {
 						},()=>{
 							this.props.onPageChange(Object.assign({},this.state));
 						})
-					}} href="javascript:void(0)">&gt;</a>
+					}} href="javascript:void(0)"><i className="fa fa-angle-right"></i></a>
 				</li>
 			</ul>
 		);

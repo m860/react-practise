@@ -20,7 +20,7 @@ export default class DataTable extends BaseComponent {
 	};
 	static defaultProps = {
 		dataSource: [],
-		className: 'striped',
+		className: 'pure-table pure-table-striped',
 		style: {},
 		renderDataEmpty: (definedColumn)=>(<tr><td colSpan={definedColumn.length} style={{textAlign:"center"}}>NO DATA</td></tr>)
 	};
