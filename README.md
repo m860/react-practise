@@ -127,6 +127,21 @@ onPageChange包含一个参数
 ##### style:?Object
 ##### className:?String
 
+### Panel
+#### props
+##### title:String|Node|Element
+##### renderRight:Function
+##### style:?Object
+##### className:?String
+
+### CollapsiblePanel
+#### props
+##### title:String|Node|Element
+##### renderRight:Function
+##### style:?Object
+##### className:?String
+##### expand:Boolean
+
 ## TODO
 
 - [ ] 添加flow语法检查
