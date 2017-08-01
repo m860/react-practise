@@ -141,6 +141,7 @@ onPageChange包含一个参数
 ##### style:?Object
 ##### className:?String
 ##### expand:Boolean
+##### onChange:Function
 
 ## TODO
 

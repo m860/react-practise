@@ -12,11 +12,13 @@ export default class CollapsiblePanel extends BaseComponent {
 		renderRight:PropTypes.func,
 		style:PropTypes.object,
 		className:PropTypes.any,
-		expand: PropTypes.bool
+		expand: PropTypes.bool,
+		onChange:PropTypes.func
 	};
 	static defaultProps = {
 		renderRight: ()=>null,
-		expand: true
+		expand: true,
+		onChange:()=>null
 	};
 
 	constructor(props) {
@@ -39,6 +41,8 @@ export default class CollapsiblePanel extends BaseComponent {
 							<a href="javascript:void(0)" onClick={()=>{
 								this.updateState({
 									expand:{$set:!this.state.expand}
+								},()=>{
+									this.props.onChange(this.state.expand);
 								})
 							}}>
 								<i className={classnames("fa",this.state.expand?"fa-angle-up":"fa-angle-down")}></i>
