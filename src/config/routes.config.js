@@ -3,6 +3,13 @@
  */
 
 const routes = [{
+	path: 'uploadfiledemo',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/UploadFileDemo.js");
+		callback(null, module.default);
+	},
+	name: "Upload File Demo"
+},{
 	path: 'paneldemo',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/PanelDemo.js");

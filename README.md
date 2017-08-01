@@ -49,17 +49,17 @@
 
 #### props
 
-##### title:?String="TITLE"
+##### title:`?String="TITLE"`
 标题,.可以在`app.ENV.config.js`中进行全局配置
 
-##### renderLogo:?Function=()=>null
+##### renderLogo:`?Function=()=>null`
 render logo,需要返回一个React Node对象,可以在`app.ENV.config.js`中进行全局配置
 
 ### DataTable
 
 #### props
 
-##### columns:Object
+##### columns:`Object`
 ```javascript
 type ColumnType={
 	name:String,
@@ -86,21 +86,21 @@ const columns=[{
     render: (rowData)=>(<span>{rowData['name']}</span>)
 }]
 ```
-##### dataSource:?Array=[]
-##### style:?Object={}
-##### className:?String="striped"
-##### renderDataEmpty:?Function
+##### dataSource:`?Array=[]`
+##### style:`?Object={}`
+##### className:`?String="striped"`
+##### renderDataEmpty:`?Function`
 
 ### Pagination
 
 #### props
 
-##### startPageNumber:?Number=0
+##### startPageNumber:`?Number=0`
 设置起始分页位置,0或者1开始分页
 
-##### pageIndex:?Number=0
-##### pageSize:?Number=10
-##### onPageChange:Function
+##### pageIndex:`?Number=0`
+##### pageSize:`?Number=10`
+##### onPageChange:`Function`
 onPageChange包含一个参数
 ```type
 {
@@ -110,12 +110,12 @@ onPageChange包含一个参数
 }
 ```
 
-##### total:Number
+##### total:`Number`
 总记录数
 
-##### style:?Object
-##### className:?String
-##### displayPageCount:?Number=5
+##### style:`?Object`
+##### className:`?String`
+##### displayPageCount:`?Number=5`
 显示的页码的个数
 
 ### DataTableWithPagination
@@ -124,24 +124,29 @@ onPageChange包含一个参数
 
 #### [...DataTable.propTypes](#datatable)
 #### [...Pagination.propTypes](#pagination)
-##### style:?Object
-##### className:?String
+##### style:`?Object`
+##### className:`?String`
 
 ### Panel
 #### props
-##### title:String|Node|Element
-##### renderRight:Function
-##### style:?Object
-##### className:?String
+##### title:`String|Node|Element`
+##### renderRight:`Function`
+##### style:`?Object`
+##### className:`?String`
 
 ### CollapsiblePanel
 #### props
-##### title:String|Node|Element
-##### renderRight:Function
-##### style:?Object
-##### className:?String
-##### expand:Boolean
-##### onChange:Function
+##### title:`String|Node|Element`
+##### renderRight:`Function`
+##### style:`?Object`
+##### className:`?String`
+##### expand:`Boolean`
+##### onChange:`Function`
+
+### UploadFile
+#### props
+##### files:`Array.<File>`
+##### onChange:`Function`
 
 ## TODO
 
