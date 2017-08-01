@@ -41,6 +41,18 @@ export default class Pagination extends BaseComponent {
 		return Math.ceil(this.props.total / this.props.pageSize);
 	}
 
+	get pageIndex() {
+		return this.state.pageIndex;
+	}
+
+	get pageSize() {
+		return this.state.pageSize;
+	}
+
+	get startPageNumber() {
+		return this.state.startPageNumber;
+	}
+
 	render() {
 		const pages = Array.apply(null, {length: this.totalPage}).map(Number.call, value=> {
 			return value + this.state.startPageNumber;
@@ -104,7 +116,7 @@ export default class Pagination extends BaseComponent {
 								},()=>{
 									this.props.onPageChange(Object.assign({},this.state));
 								});
-							}} href="javascript:void(0)">{num}</a>
+							}} href="javascript:void(0)">{this.startPageNumber === 0 ? num + 1 : num}</a>
 						</li>
 					);
 				})}

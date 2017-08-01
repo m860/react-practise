@@ -126,6 +126,8 @@ onPageChange包含一个参数
 #### [...Pagination.propTypes](#pagination)
 ##### style:`?Object`
 ##### className:`?String`
+##### showIndex:`?Boolean`
+是否显示索引
 
 ### Panel
 #### props
