@@ -9,7 +9,8 @@ const styles = {
 	wrapper: {
 		display: "flex",
 		flex: 1,
-		overflow: "auto"
+		overflow: "auto",
+		flexDirection:"column"
 	}
 };
 
