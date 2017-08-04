@@ -1,6 +1,3 @@
-/**
- * Created by jean.h.ma on 5/9/17.
- */
 import React from "react";
 import BaseComponent from "../BaseComponent";
 import PropTypes from "prop-types";

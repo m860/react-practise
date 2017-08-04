@@ -1,27 +1,24 @@
 {
-  "name": "react-webpack-template",
-  "version": "2.1.0",
+  "name": "react-practise",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server  --host 0.0.0.0 --inline --progress --colors --port 3000 --content-base src/",
-    "build:chuanshi": "export NODE_ENV=production && export TARGET=chuanshi && webpack --env.minor --progress --profile --colors && cp src/web.config dist",
-    "build:aliyun": "export NODE_ENV=production && export TARGET=aliyun && webpack --env.minor --progress --profile --colors && cp src/web.config dist",
-    "deploy:aliyun": "npm run build:aliyun && node deploy.js http://39.108.11.254:3001",
-    "deploy:chuanshi": "npm run build:chuanshi && node deploy.js http://222.196.244.37:3001",
-    "deploy:chuanshilocal": "npm run build:chuanshi && node deploy.js http://192.168.2.202:3001"
+    "build": "export NODE_ENV=production && webpack --env.minor --progress --profile --colors && cp src/web.config dist",
+    "build:doc": "documentation readme src/components/** --section 'API'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m860/react-component.git"
+    "url": "git+https://github.com/m860/react-practise.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m860/react-component/issues"
+    "url": "https://github.com/m860/react-practise/issues"
   },
-  "homepage": "https://github.com/m860/react-component#readme",
+  "homepage": "https://github.com/m860/react-practise#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.4",

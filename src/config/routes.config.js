@@ -1,7 +1,3 @@
-/**
- * Created by jean.h.ma on 2/6/17.
- */
-
 const routes = [{
 	path: 'uploadfiledemo',
 	getComponent: async(location, callback)=> {

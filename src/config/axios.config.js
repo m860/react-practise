@@ -1,6 +1,3 @@
-/**
- * Created by jean.h.ma on 2/24/17.
- */
 import axios from 'axios'
 import {getToken} from '../pages/Index'
 import {store, $error, $toggleLoading} from '../App'

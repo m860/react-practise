@@ -1,6 +1,3 @@
-/**
- * Created by jean.h.ma on 5/8/17.
- */
 import BaseComponent from "./BaseComponent.js"
 import PropTypes from 'prop-types'
 
