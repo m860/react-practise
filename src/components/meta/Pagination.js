@@ -3,7 +3,38 @@ import BaseComponent from "../BaseComponent";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+/**
+ * Pagination - 页码
+ *
+ * @example <caption>从0开始分页</caption>
+ *
+ * <Pagination
+ *    onPageChange={(pageInfo)=>{
+ *						console.log('page change',pageInfo)
+ *					}}
+ *      total={23}/>
+ *
+ * @example <caption>从1开始分页</caption>
+ * <Pagination
+ *	startPageNumber={1}
+ *	pageIndex={1}
+ *	onPageChange={(pageInfo)=>{
+ *		console.log('page change',pageInfo)
+ *	}}
+ *	total={100}/>
+ *
+ * */
 export default class Pagination extends BaseComponent {
+	/**
+	 * @property {?Number} startPageNumber [ 0 ] - 分页开始的起始页`0`或者`1`
+	 * @property {?Number} pageIndex [ 0 ] - 当前页
+	 * @property {?Number} pageSize [ 10 ] - 每页记录数
+	 * @property {Function} onPageChange - 分页事件监听
+	 * @property {Number} total - 总记录数
+	 * @property {?Object} style - 样式
+	 * @property {String} className [ pagination ] - css class样式
+	 * @property {?Number} displayPageCount [ 5 ] - 最多可以显示多少页面
+	 * */
 	static propTypes = {
 		startPageNumber: PropTypes.number,
 		pageIndex: PropTypes.number,
@@ -31,6 +62,9 @@ export default class Pagination extends BaseComponent {
 		};
 	}
 
+	/**
+	 * 总页数
+	 * */
 	get totalPage() {
 		if (this.props.total <= 0) {
 			return 0;
@@ -38,14 +72,23 @@ export default class Pagination extends BaseComponent {
 		return Math.ceil(this.props.total / this.props.pageSize);
 	}
 
+	/**
+	 * 当前页码
+	 * */
 	get pageIndex() {
 		return this.state.pageIndex;
 	}
 
+	/**
+	 * 每页记录数
+	 * */
 	get pageSize() {
 		return this.state.pageSize;
 	}
 
+	/**
+	 * 起始分页页码
+	 * */
 	get startPageNumber() {
 		return this.state.startPageNumber;
 	}
@@ -131,9 +174,4 @@ export default class Pagination extends BaseComponent {
 			</ul>
 		);
 	}
-
-	// componentDidMount(){
-	// 	super.componentDidMount();
-	// 	this.props.onPageChange(Object.assign({},this.state));
-	// }
 }

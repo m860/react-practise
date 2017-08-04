@@ -43,151 +43,6 @@
     $ npm run dev
     ```
 
-## component
-
-### Nav
-
-#### props
-
-##### title:`?String="TITLE"`
-
-标题,.可以在`app.ENV.config.js`中进行全局配置
-
-##### renderLogo:`?Function=()=>null`
-
-render logo,需要返回一个React Node对象,可以在`app.ENV.config.js`中进行全局配置
-
-### DataTable
-
-#### props
-
-##### columns:`Object`
-
-```javascript
-type ColumnType={
-	name:String,
-	className:?String,
-	style:?Object,
-	//@desc render函数包含4个参数,依次是rowData,rowIndex,column,columnIndex
-	//@return String|HTML Element|React Node
-	render:Function
-};
-```
-
-name和render是必须提供.name设置列的名称,render设置列的样式和数据.
-
-```javascript
-//Example1 
-//render直接返回数据
-const columns=[{
-    name: "Name",
-    render: (rowData)=>rowData['name']
-}]
-
-//Example2
-//render返回一个Element
-const columns=[{
-    name: "Name",
-    render: (rowData)=>(<span>{rowData['name']}</span>)
-}]
-```
-
-##### dataSource:`?Array=[]`
-
-##### style:`?Object={}`
-
-##### className:`?String="striped"`
-
-##### renderDataEmpty:`?Function`
-
-### Pagination
-
-#### props
-
-##### startPageNumber:`?Number=0`
-
-设置起始分页位置,0或者1开始分页
-
-##### pageIndex:`?Number=0`
-
-##### pageSize:`?Number=10`
-
-##### onPageChange:`Function`
-
-onPageChange包含一个参数
-
-```type
-{
-  pageIndex:Number,
-  pageSize:Number,
-  startPageNumber:Number
-}
-```
-
-##### total:`Number`
-
-总记录数
-
-##### style:`?Object`
-
-##### className:`?String`
-
-##### displayPageCount:`?Number=5`
-
-显示的页码的个数
-
-### DataTableWithPagination
-
-#### props
-
-#### [...DataTable.propTypes](#datatable)
-
-#### [...Pagination.propTypes](#pagination)
-
-##### style:`?Object`
-
-##### className:`?String`
-
-##### showIndex:`?Boolean`
-
-是否显示索引
-
-### Panel
-
-#### props
-
-##### title:`String|Node|Element`
-
-##### renderRight:`Function`
-
-##### style:`?Object`
-
-##### className:`?String`
-
-### CollapsiblePanel
-
-#### props
-
-##### title:`String|Node|Element`
-
-##### renderRight:`Function`
-
-##### style:`?Object`
-
-##### className:`?String`
-
-##### expand:`Boolean`
-
-##### onChange:`Function`
-
-### UploadFile
-
-#### props
-
-##### files:`Array.<File>`
-
-##### onChange:`Function`
-
 ## TODO
 
 -   [ ] 添加flow语法检查
@@ -279,7 +134,7 @@ render(){
 }
 ```
 
-### propTypes
+#### propTypes
 
 **Properties**
 
@@ -292,3 +147,99 @@ render(){
 -   `style` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
 -   `className` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** ['pure-table pure-table-striped']
 -   `renderDataEmpty` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)?** [(definedColumn)=>(<tr><td colSpan={definedColumn.length} style={{textAlign:"center"}}>NO DATA</td></tr>)]
+
+### Layout
+
+**Extends BaseComponent**
+
+Layout - 所有的页面必须以Layout(或者是实现了Layout布局的其他组件,如LayoutWithNav)作为Root节点
+
+**Examples**
+
+```javascript
+class XX extends React.PureComponent{
+		render(){
+			return (
+				<Layout>
+				    <div>do something</div>
+				</Layout>
+			);
+		}
+}
+```
+
+### Nav
+
+**Extends BaseComponent**
+
+Nav - 导航栏
+
+#### propTypes
+
+**Properties**
+
+-   `title` **([String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)? | [HtmlElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) | React.node)** ['THIS IS A TITLE']
+-   `logo` **([HtmlElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) | React.node)** 
+
+### Pagination
+
+**Extends BaseComponent**
+
+Pagination - 页码
+
+**Parameters**
+
+-   `props`  
+
+**Examples**
+
+_从0开始分页_
+
+```javascript
+<Pagination
+   onPageChange={(pageInfo)=>{
+					console.log('page change',pageInfo)
+				}}
+     total={23}/>
+```
+
+_从1开始分页_
+
+```javascript
+<Pagination
+startPageNumber={1}
+pageIndex={1}
+onPageChange={(pageInfo)=>{
+	console.log('page change',pageInfo)
+}}
+total={100}/>
+```
+
+#### totalPage
+
+总页数
+
+#### pageIndex
+
+当前页码
+
+#### pageSize
+
+每页记录数
+
+#### startPageNumber
+
+起始分页页码
+
+#### propTypes
+
+**Properties**
+
+-   `startPageNumber` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** [ 0 ] - 分页开始的起始页`0`或者`1`
+-   `pageIndex` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** [ 0 ] - 当前页
+-   `pageSize` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** [ 10 ] - 每页记录数
+-   `onPageChange` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 分页事件监听
+-   `total` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 总记录数
+-   `style` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 样式
+-   `className` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** [ pagination ] - css class样式
+-   `displayPageCount` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)?** [ 5 ] - 最多可以显示多少页面

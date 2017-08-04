@@ -75,8 +75,6 @@ import PropTypes from "prop-types";
  */
 export default class DataTable extends BaseComponent {
 	/**
-	 * @name propTypes
-	 *
 	 * @property {Array<Object>} columns
 	 * @property {String} columns[].name
 	 * @property {?String} columns[].className
