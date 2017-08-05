@@ -4,7 +4,21 @@ import DataTable from "./DataTable";
 import Pagination from "./Pagination";
 import PropTypes from "prop-types";
 
+/**
+ * 带分页的DataTable,由DataTable和Pagination组合的复合组件
+ * */
 export default class DataTableWithPagination extends BaseComponent {
+	/**
+	 * {@link DataTable.propTypes ...DataTable.propTypes}
+	 * {@link Pagination.propTypes ...Pagination.propTypes}
+	 * @property {?Object} style
+	 * @property {?String} className
+	 * @property {?Object} dataTableStyle - DataTable样式
+	 * @property {?String} dataTableClassName - DataTable css class
+	 * @property {?Object} paginationStyle - Pagination 样式
+	 * @property {?String} paginationClassName - Pagination css class
+	 * @property {?Boolean} showIndex [ true ] - 是否显示索引列
+	 * */
 	static propTypes = {
 		style: PropTypes.object,
 		className: PropTypes.any,
@@ -27,6 +41,17 @@ export default class DataTableWithPagination extends BaseComponent {
 		showIndex: true
 	};
 
+	/**
+	 * 全局RowIndex
+	 * */
+	getGlobalRowIndex(localRowIndex:Number):Number{
+		const index = this.refs['pagination'].pageIndex * this.refs['pagination'].pageSize;
+		if(this.refs['pagination'].startPageNumber===0) {
+			return index + localRowIndex+1;
+		}
+		return  index + localRowIndex;
+	}
+
 	render() {
 		const dataTablePropKeys = Object.keys(DataTable.propTypes).concat(["dataTableStyle", "dataTableClassName"]);
 		const paginationPropKeys = Object.keys(Pagination.propTypes).concat(["paginationStyle", "paginationClassName"]);
@@ -41,12 +66,9 @@ export default class DataTableWithPagination extends BaseComponent {
 		if (this.props.showIndex) {
 			dataTableOption.columns = [{
 				name: "#",
+				style:{width:"20px"},
 				render: (rowData, rowIndex)=> {
-					const index = this.refs['pagination'].pageIndex * this.refs['pagination'].pageSize;
-					if(this.refs['pagination'].startPageNumber===0) {
-						return index + rowIndex+1;
-					}
-					return  index + rowIndex;
+					return this.getGlobalRowIndex(rowIndex);
 				}
 			}, ...dataTableOption.columns];
 		}

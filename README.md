@@ -148,6 +148,37 @@ render(){
 -   `className` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** ['pure-table pure-table-striped']
 -   `renderDataEmpty` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)?** [(definedColumn)=>(<tr><td colSpan={definedColumn.length} style={{textAlign:"center"}}>NO DATA</td></tr>)]
 
+### DataTableWithPagination
+
+**Extends BaseComponent**
+
+带分页的DataTable,由DataTable和Pagination组合的复合组件
+
+#### getGlobalRowIndex
+
+全局RowIndex
+
+**Parameters**
+
+-   `localRowIndex` **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+Returns **[Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
+
+#### propTypes
+
+[...DataTable.propTypes](#datatableproptypes)
+[...Pagination.propTypes](#paginationproptypes)
+
+**Properties**
+
+-   `style` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
+-   `className` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+-   `dataTableStyle` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** DataTable样式
+-   `dataTableClassName` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** DataTable css class
+-   `paginationStyle` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Pagination 样式
+-   `paginationClassName` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** Pagination css class
+-   `showIndex` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** [ true ] - 是否显示索引列
+
 ### Layout
 
 **Extends BaseComponent**
