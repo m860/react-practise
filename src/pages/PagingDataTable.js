@@ -4,24 +4,24 @@
 import React from "react";
 import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNav";
-import DataTableWithPagination from "../components/meta/DataTableWithPagination";
+import {DataTableWithPagination} from "react-component-data-table";
 
 export default class PagingDataTable extends BasePage {
 	constructor(props) {
 		super(props);
 		this.dataSource = [
-			{name: "Jean", sex: "mail"},
-			{name: "Jean2", sex: "mail"},
-			{name: "Jean3", sex: "mail"},
-			{name: "Jean4", sex: "mail"},
-			{name: "Jean5", sex: "mail"},
-			{name: "Jean6", sex: "mail"},
-			{name: "Jean7", sex: "mail"},
-			{name: "Jean8", sex: "mail"},
-			{name: "Jean9", sex: "mail"},
-			{name: "Jean10", sex: "mail"},
-			{name: "Jean11", sex: "mail"},
-			{name: "Jean12", sex: "mail"},
+			{name: "Jean", sex: "male"},
+			{name: "Jean2", sex: "male"},
+			{name: "Jean3", sex: "male"},
+			{name: "Jean4", sex: "male"},
+			{name: "Jean5", sex: "male"},
+			{name: "Jean6", sex: "male"},
+			{name: "Jean7", sex: "male"},
+			{name: "Jean8", sex: "male"},
+			{name: "Jean9", sex: "male"},
+			{name: "Jean10", sex: "male"},
+			{name: "Jean11", sex: "male"},
+			{name: "Jean12", sex: "male"},
 		];
 		this.dataTableColumns = [{
 			name: "Name",
@@ -43,6 +43,7 @@ export default class PagingDataTable extends BasePage {
 			<LayoutWithNav>
 				<h5>Paging DataTable</h5>
 				<DataTableWithPagination
+					dataTableClassName="pure-table pure-table-striped"
 					onPageChange={filter=>{
 						this.updateState({
 							dataSource:{$set:this.dataSource.slice(filter.pageIndex*filter.pageSize,filter.pageIndex*filter.pageSize+filter.pageSize)}

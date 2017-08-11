@@ -5,7 +5,10 @@ import React from "react";
 import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNav";
 import {Link} from "react-router";
-import DataTable from "../components/meta/DataTable";
+// import DataTable from "../components/meta/DataTable";
+// import DataTable from "react-component-data-table/components/DataTable";
+import {DataTable} from "react-component-data-table";
+
 
 class SimpleDataTableDemo extends React.PureComponent{
 	render(){
@@ -17,7 +20,7 @@ class SimpleDataTableDemo extends React.PureComponent{
 			{name:"Name",render:rowData=>rowData['name']},
 			{name:"Sex",render:rowData=>rowData['sex']},
 		];
-		return <DataTable columns={columns} dataSource={dataSource}></DataTable>
+		return <DataTable className="pure-table pure-table-striped" columns={columns} dataSource={dataSource}></DataTable>
 	}
 }
 
@@ -28,7 +31,7 @@ class EmptyDataTableDemo extends React.PureComponent{
 			{name:"Name",render:rowData=>rowData['name']},
 			{name:"Sex",render:rowData=>rowData['sex']},
 		];
-		return <DataTable columns={columns} dataSource={dataSource}></DataTable>
+		return <DataTable className="pure-table pure-table-striped" columns={columns} dataSource={dataSource}></DataTable>
 	}
 }
 
@@ -45,7 +48,7 @@ class RadioDataTableDemo extends React.PureComponent{
 			{name:"Name",render:rowData=>rowData['name']},
 			{name:"Sex",render:rowData=>rowData['sex']},
 		];
-		return <DataTable columns={columns} dataSource={dataSource}></DataTable>
+		return <DataTable className="pure-table pure-table-striped" columns={columns} dataSource={dataSource}></DataTable>
 	}
 }
 
@@ -62,7 +65,7 @@ class CheckboxDataTableDemo extends React.PureComponent{
 			{name:"Name",render:rowData=>rowData['name']},
 			{name:"Sex",render:rowData=>rowData['sex']},
 		];
-		return <DataTable columns={columns} dataSource={dataSource}></DataTable>
+		return <DataTable className="pure-table pure-table-striped" columns={columns} dataSource={dataSource}></DataTable>
 	}
 }
 

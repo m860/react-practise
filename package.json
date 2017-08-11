@@ -61,6 +61,7 @@
     "prop-types": "^15.5.9",
     "purecss": "^1.0.0",
     "react": "^15.5.4",
+    "react-component-data-table": "^1.1.2",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.3",
     "react-router": "^2.0.1",

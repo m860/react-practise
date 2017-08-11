@@ -5,7 +5,7 @@ import React from "react";
 import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNav";
 import {Link} from "react-router";
-import Pagination from '../components/meta/Pagination'
+import {Pagination} from 'react-component-data-table'
 
 export default class PaginationDemo extends BasePage {
 	render() {
