@@ -3,11 +3,11 @@ import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
 
 /**
- * Nav - 导航栏
+ * Navigation - 导航栏
  * */
 export default class Navigation extends BaseComponent {
 	/**
-	 * @property {(?String|HtmlElement|React.node)} title ['THIS IS A TITLE']
+	 * @property {(?String|HtmlElement|React.node)} title [ THIS IS A TITLE ]
 	 * @property {(HtmlElement|React.node)} logo
 	 * */
 	static propTypes = {

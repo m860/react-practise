@@ -2,6 +2,9 @@ import React from "react";
 import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
 
+/**
+ * Spinner
+ * */
 export default class Spinner extends BaseComponent {
 	static propTypes = {
 		loading: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),

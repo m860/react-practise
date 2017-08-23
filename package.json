@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server  --host 0.0.0.0 --inline --progress --colors --port 3001 --content-base src/",
     "build": "export NODE_ENV=production && webpack --env.minor --progress --profile --colors && cp src/web.config dist",
-    "build:doc": "documentation readme src/components/** --section 'API'"
+    "build:doc": "documentation build src/components/** -f=md -g=true -o=./API.md"
   },
   "repository": {
     "type": "git",
