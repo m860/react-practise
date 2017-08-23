@@ -3,7 +3,7 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNav";
+import LayoutWithNav from "../components/LayoutWithNavigation";
 import {getDefinedPaths} from "../config/routes.config";
 import {Link} from "react-router";
 

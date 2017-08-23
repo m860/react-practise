@@ -1,6 +1,6 @@
 import React from "react";
 import BaseComponent from "./BaseComponent.js";
-import Nav from "./meta/Nav";
+import Nav from "./meta/Navigation";
 import Layout from "./meta/Layout";
 import PropTypes from "prop-types";
 import config from "config";
@@ -14,7 +14,7 @@ const styles = {
 	}
 };
 
-export default class LayoutWithNav extends BaseComponent {
+export default class LayoutWithNavigation extends BaseComponent {
 	static propTypes = {
 		navOptions: PropTypes.object
 	};

@@ -3,10 +3,9 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNav";
+import LayoutWithNav from "../components/LayoutWithNavigation";
 import {Link} from "react-router";
-import Panel from "../components/meta/Panel";
-import CollapsiblePanel from "../components/meta/CollapsiblePanel";
+import {Panel,CollapsiblePanel} from 'react-component-panel'
 
 export default class SimpleDataTable extends BasePage {
 	constructor(props) {

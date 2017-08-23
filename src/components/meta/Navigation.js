@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 /**
  * Nav - 导航栏
  * */
-export default class Nav extends BaseComponent {
+export default class Navigation extends BaseComponent {
 	/**
 	 * @property {(?String|HtmlElement|React.node)} title ['THIS IS A TITLE']
 	 * @property {(HtmlElement|React.node)} logo

@@ -3,7 +3,7 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNav";
+import LayoutWithNav from "../components/LayoutWithNavigation";
 import {Link} from "react-router";
 import {Pagination} from 'react-component-data-table'
 
