@@ -4,41 +4,35 @@ import PropTypes from "prop-types";
 
 export default class UploadFile extends BaseComponent {
 	static propTypes = {
-		files: PropTypes.array,
-		onChange: PropTypes.func
+		value: PropTypes.array,
+		onChange: PropTypes.func,
+		renderAddText: PropTypes.func,
+		renderUploadText: PropTypes.func,
+		onUploadClick: PropTypes.func,
+		renderCloseText: PropTypes.func,
 	};
 	static defaultProps = {
-		files: [],
-		onChange:()=>null
+		value: [],
+		onChange: ()=>null,
+		renderAddText: ()=>"添加文件",
+		renderUploadText: ()=>"上传",
+		onUploadClick: ()=>null,
+		renderCloseText:()=>"x"
 	};
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			files: props.files
+			files: props.value
 		};
 	}
 
 	render() {
 		return (
 			<div className="upload-file">
-				{this.state.files.map((f, i)=> {
-					return (
-						<div key={`upload-file-${i}`} className="file">
-							{f.name}
-							<a href="javascript:void(0)" onClick={()=>{
-								this.updateState({
-									files:{$splice:[[i,1]]}
-								},()=>{
-									this.props.onChange([f],[...this.state.files]);
-								})
-							}}><i className="fa fa-close"></i></a>
-						</div>
-					);
-				})}
-				<div className="file-add">
-					<i className="fa fa-plus"></i>
-					<input type="file" onChange={event=>{
+				<div>
+					<button className="button-file" type="button">
+						<input type="file" onChange={event=>{
 						const files=event.target.files;
 						const len=files.length;
 						if(len>0){
@@ -53,6 +47,29 @@ export default class UploadFile extends BaseComponent {
 							});
 						}
 					}}/>
+						{this.props.renderAddText()}
+					</button>
+					<button onClick={event=>{
+						this.props.onUploadClick(event,this.state.files);
+					}} className="button-upload" type="button">
+						{this.props.renderUploadText()}
+					</button>
+				</div>
+				<div>
+					{this.state.files.map((f, i)=> {
+						return (
+							<div key={`upload-file-${i}`} className="file">
+								{f.name}
+								<a href="javascript:void(0)" onClick={()=>{
+									this.updateState({
+										files:{$splice:[[i,1]]}
+									},()=>{
+										this.props.onChange([f],[...this.state.files]);
+									})
+								}}>{this.props.renderCloseText()}</a>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		);

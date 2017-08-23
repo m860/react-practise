@@ -1,9 +1,22 @@
 .upload-file
   display: flex
-  flex-direction: row
+  flex-direction: column
   background-color: silver
   padding: 3px
   flex-wrap: wrap
+  >div
+    display: flex
+  button.button-file
+    position: relative
+    overflow: hidden
+    input[type=file]
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      opacity: 0
+
   .file
     display: flex
     padding: 5px 10px

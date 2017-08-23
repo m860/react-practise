@@ -24,6 +24,7 @@ export default class Nav extends BaseComponent {
 				<div>
 					{this.props.logo}
 					{this.props.title}
+					<div></div>
 				</div>
 			</nav>
 		);
