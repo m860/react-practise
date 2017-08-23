@@ -3,7 +3,9 @@
  */
 import {combineReducers} from 'redux';
 import toast from './toast.ar'
+import loading from './loading.ar'
 
 export default combineReducers({
-	toast
+	toast,
+	loading
 })

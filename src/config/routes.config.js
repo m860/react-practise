@@ -1,4 +1,11 @@
 const routes = [{
+	path: 'loadingviewdemo',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/LoadingViewDemo.js");
+		callback(null, module.default);
+	},
+	name: "LoadingView Demo"
+},{
 	path: 'uploadfiledemo',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/UploadFileDemo.js");

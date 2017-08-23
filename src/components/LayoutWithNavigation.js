@@ -4,16 +4,14 @@ import Nav from "./meta/Navigation";
 import Layout from "./meta/Layout";
 import PropTypes from "prop-types";
 import config from "config";
+import LoadingView from './LoadingView'
+import {connect} from 'react-redux'
 
-const styles = {
-	wrapper: {
-		display: "flex",
-		flex: 1,
-		overflow: "auto",
-		flexDirection:"column"
+@connect(({loading})=> {
+	return {
+		visibleLoading: loading.count > 0
 	}
-};
-
+})
 export default class LayoutWithNavigation extends BaseComponent {
 	static propTypes = {
 		navOptions: PropTypes.object
@@ -25,10 +23,12 @@ export default class LayoutWithNavigation extends BaseComponent {
 	render() {
 		return (
 			<Layout>
-				<Nav {...this.props.navOptions}/>
-				<div style={styles.wrapper}>
-					{this.props.children}
-				</div>
+				<LoadingView visible={this.props.visibleLoading}>
+					<Nav {...this.props.navOptions}/>
+					<div className="wrapper">
+						{this.props.children}
+					</div>
+				</LoadingView>
 			</Layout>
 		);
 	}
