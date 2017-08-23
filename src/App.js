@@ -27,7 +27,10 @@ export const store = createStore(
 let storeIsReady = false;
 
 persistStore(store, {
-	blacklist: []
+	blacklist: [
+		'toast',
+		'loading'
+	]
 }, ()=> {
 	storeIsReady = true;
 });
