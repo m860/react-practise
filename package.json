@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/m860/react-practise.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "m860",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/m860/react-practise/issues"
   },

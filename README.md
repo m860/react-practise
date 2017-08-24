@@ -41,9 +41,9 @@
 ## command
 
 -   启动开发环境
-    ```shell
-    $ npm run dev
-    ```
+```shell
+$ npm run dev
+```
 
 ## TODO
 
@@ -52,3 +52,6 @@
 - [x] LoadingView
 - [ ] Toast
 - [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
+- [ ] init
+- [ ] migration react-transition-group to v2
+- [ ] migration react-router to v3
