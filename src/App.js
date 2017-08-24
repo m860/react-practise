@@ -14,6 +14,7 @@ import React, {PureComponent} from "react";
 import ReactDOM from "react-dom";
 import "./config/axios.config";
 import {persistStore, autoRehydrate} from "redux-persist";
+import Toast from './components/Toast'
 
 export const store = createStore(
 	reducers,
@@ -71,6 +72,7 @@ class App extends PureComponent {
 							})
 						}
 					</ReactCSSTransitionGroup>
+					<Toast/>
 				</span>
 			</Provider>
 		);

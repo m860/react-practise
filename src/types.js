@@ -5,3 +5,8 @@ export type ActionType={
 	type:String,
 	payload:Object
 };
+
+export type ToastMessageType={
+	type:String, //error,warn,info
+	message:String
+};

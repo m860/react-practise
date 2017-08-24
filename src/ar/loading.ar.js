@@ -25,7 +25,7 @@ const initialState: Object = {
 	count: 0
 };
 
-export default function (state: Object = initialState, action: ActionType = {}): void {
+export default function (state: Object = initialState, action: ActionType = {}): Object {
 	switch (action.type) {
 		case SHOW_LOADING:
 			return update(state, {

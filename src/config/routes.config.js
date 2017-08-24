@@ -1,4 +1,11 @@
 const routes = [{
+	path: 'toastdemo',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/ToastDemo.js");
+		callback(null, module.default);
+	},
+	name: "Toast Demo"
+},{
 	path: 'loadingviewdemo',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/LoadingViewDemo.js");

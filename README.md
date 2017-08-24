@@ -47,4 +47,8 @@
 
 ## TODO
 
--   [ ] 添加flow语法检查
+- [ ] 添加flow语法检查
+- [x] Loading
+- [x] LoadingView
+- [ ] Toast
+- [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
