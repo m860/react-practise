@@ -1,6 +1,6 @@
 # React Practise
 
-[API](./API.md)
+[Examples & API Documents](./API.md)
 
 ## common guideline
 
