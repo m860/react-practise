@@ -55,3 +55,4 @@ $ npm run dev
 - [ ] init
 - [ ] migration react-transition-group to v2
 - [ ] migration react-router to v3
+- [ ] migration webpack to v2
