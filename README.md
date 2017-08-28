@@ -45,6 +45,12 @@
 $ npm run dev
 ```
 
+## init
+
+```shell
+$ ./init.sh ~/Download/abc
+```
+
 ## TODO
 
 - [ ] 添加flow语法检查
@@ -52,7 +58,7 @@ $ npm run dev
 - [x] LoadingView
 - [ ] Toast
 - [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
-- [ ] init
+- [x] init
 - [ ] migration react-transition-group to v2
 - [ ] migration react-router to v3
 - [ ] migration webpack to v2
