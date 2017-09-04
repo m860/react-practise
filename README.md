@@ -48,7 +48,7 @@ $ npm run dev
 ## init
 
 ```shell
-$ ./init.sh ~/Download/abc
+$ ./init.sh <folder> [options]
 ```
 
 ## TODO
