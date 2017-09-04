@@ -28,7 +28,7 @@ fsExtra.copySync(path.join(__dirname, '.babelrc'), path.join(targetFolder, '.bab
 console.log('copying .eslintrc')
 fsExtra.copySync(path.join(__dirname, '.eslintrc'), path.join(targetFolder, '.eslintrc'), {overwrite: true});
 console.log('copying package.json')
-fsExtra.copySync(path.join(__dirname, 'package.json'), path.join(targetFolder, 'package.json'), {overwrite: true});
+fsExtra.copySync(path.join(__dirname, 'package.temp.json'), path.join(targetFolder, 'package.json'), {overwrite: true});
 console.log('copying webpack.config.js')
 fsExtra.copySync(path.join(__dirname, 'webpack.config.js'), path.join(targetFolder, 'webpack.config.js'), {overwrite: true});
 console.log('copying src/')

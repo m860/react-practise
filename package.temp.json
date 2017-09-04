@@ -1,5 +1,5 @@
 {
-  "name": "react-practise",
+  "name": "${name}",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m860/react-practise.git"
+    "url": "git+${url}.git"
   },
   "author": "m860",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/m860/react-practise/issues"
+    "url": "${url}/issues"
   },
-  "homepage": "https://github.com/m860/react-practise#readme",
+  "homepage": "${url}#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.4",
@@ -53,23 +53,23 @@
     "yargs": "^8.0.2"
   },
   "dependencies": {
-    "axios": "^0.15.3",
-    "classnames": "^2.2.4",
+    "axios": "^0.16.2",
+    "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "guid": "0.0.12",
-    "immutability-helper": "^2.1.2",
+    "immutability-helper": "^2.3.1",
     "normalize-css": "^2.3.1",
-    "prop-types": "^15.5.9",
+    "prop-types": "^15.5.10",
     "purecss": "^1.0.0",
-    "react": "^15.5.4",
-    "react-component-data-table": "^1.1.2",
+    "react": "^15.6.1",
+    "react-component-data-table": "^1.1.5",
     "react-component-panel": "^1.1.1",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.3",
-    "react-router": "^2.0.1",
-    "react-transition-group": "^1.1.3",
-    "redux": "^3.6.0",
-    "redux-persist": "^4.7.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-transition-group": "^2.2.0",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.9.1",
     "redux-thunk": "^2.2.0"
   }
 }
