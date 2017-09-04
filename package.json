@@ -1,5 +1,5 @@
 {
-  "name": "react-practise",
+  "name": "${name}",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m860/react-practise.git"
+    "url": "git+${url}.git"
   },
   "author": "m860",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/m860/react-practise/issues"
+    "url": "${url}/issues"
   },
-  "homepage": "https://github.com/m860/react-practise#readme",
+  "homepage": "${url}#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.4",
@@ -38,6 +38,7 @@
     "eslint-plugin-react": "^4.3.0",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.8.5",
+    "fs-extra": "^4.0.1",
     "html-webpack-plugin": "^2.28.0",
     "image-webpack-loader": "^1.7.0",
     "node-sass": "^3.4.2",
@@ -48,7 +49,8 @@
     "uglifyjs-webpack-plugin": "^0.2.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "yargs": "^8.0.2"
   },
   "dependencies": {
     "axios": "^0.15.3",
