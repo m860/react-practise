@@ -17,6 +17,7 @@
     "no-console":1,
     "no-mixed-spaces-and-tabs":0,
     "no-unused-vars":1,
-    "no-inner-declarations":0
+    "no-inner-declarations":0,
+    "no-debugger":1
   }
 }

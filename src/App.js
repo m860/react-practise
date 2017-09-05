@@ -14,7 +14,7 @@ import React, {PureComponent} from "react";
 import ReactDOM from "react-dom";
 import "./config/axios.config";
 import {persistStore, autoRehydrate} from "redux-persist";
-import Toast from './components/Toast'
+import ToastView from './components/ToastView'
 
 export const store = createStore(
 	reducers,
@@ -61,7 +61,7 @@ class App extends PureComponent {
 	render() {
 		return (
 			<Provider store={store}>
-				<span>
+				<ToastView>
 					<ReactCSSTransitionGroup
 						transitionName={appConfig.getTransitionName(this.props.location)}
 						transitionEnterTimeout={appConfig.transitionTimeout}
@@ -72,8 +72,7 @@ class App extends PureComponent {
 							})
 						}
 					</ReactCSSTransitionGroup>
-					<Toast/>
-				</span>
+				</ToastView>
 			</Provider>
 		);
 	}

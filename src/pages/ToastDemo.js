@@ -8,10 +8,14 @@ import {Link} from "react-router";
 import LoadingView from '../components/LoadingView'
 import {showLoading, hideLoading} from '../ar/loading.ar'
 import {connect} from 'react-redux'
-import {pushMessage} from '../ar/toast.ar'
+// import {pushMessage} from '../ar/toast.ar'
+import PropTypes from 'prop-types'
 
 @connect()
 export default class ToastDemo extends BasePage {
+	static contextTypes={
+		pushMessage:PropTypes.func
+	};
 	render() {
 		return (
 			<LayoutWithNav>
@@ -19,10 +23,16 @@ export default class ToastDemo extends BasePage {
 				<div>
 					<button
 						onClick={()=>{
+							this.context.pushMessage({
+								type:"info",
+								message:`new message : ${Math.random()}`
+							})
+							/*
 							this.props.dispatch(pushMessage({
 								type:"info",
 								message:`new message : ${Math.random()}`
 							}))
+							*/
 						}}
 						type="button">show message
 					</button>
