@@ -5,7 +5,7 @@ import "./assets/sass/app.sass";
 import {Router, Route, hashHistory, IndexRoute} from "react-router";
 import routes from "./config/routes.config";
 import appConfig from "config";
-import ReactCSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
+//import ReactCSSTransitionGroup from "react-transition-group/CSSTransition";
 import {createStore, applyMiddleware, compose} from "redux";
 import {Provider} from "react-redux";
 import reducers from "./ar";
@@ -62,16 +62,7 @@ class App extends PureComponent {
 		return (
 			<Provider store={store}>
 				<ToastView>
-					<ReactCSSTransitionGroup
-						transitionName={appConfig.getTransitionName(this.props.location)}
-						transitionEnterTimeout={appConfig.transitionTimeout}
-						transitionLeaveTimeout={appConfig.transitionTimeout}>
-						{
-							React.cloneElement(this.props.children, {
-								key: this.props.location.pathname
-							})
-						}
-					</ReactCSSTransitionGroup>
+					{this.props.children}
 				</ToastView>
 			</Provider>
 		);

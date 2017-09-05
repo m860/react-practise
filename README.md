@@ -56,9 +56,11 @@ $ ./init.sh <folder> [options]
 - [ ] 添加flow语法检查
 - [x] Loading
 - [x] LoadingView
-- [ ] Toast
+- [x] Toast
+- [x] ToastView
 - [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
 - [x] init
-- [ ] migration react-transition-group to v2
-- [ ] migration react-router to v3
+- [x] migration react-transition-group to v2
+- [ ] migration react-router to v4
+    - [ ] add route transition
 - [ ] migration webpack to v2

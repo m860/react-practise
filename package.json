@@ -43,7 +43,6 @@
     "image-webpack-loader": "^1.7.0",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.2",
-    "react-mixin": "^2.0.2",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "uglify-js": "^2.8.29",
@@ -68,7 +67,7 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.3",
     "react-router": "^2.0.1",
-    "react-transition-group": "^1.2.0",
+    "react-transition-group": "^2.2.0",
     "redux": "^3.6.0",
     "redux-persist": "^4.7.1",
     "redux-thunk": "^2.2.0"

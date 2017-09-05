@@ -28,7 +28,6 @@ export default class ToastView extends BaseComponent {
 	}
 
 	render() {
-		console.log('render ToastView ...')
 		return (
 			<span>
 				<Toast ref="toast" messages={this.props.messages}/>
@@ -39,6 +38,5 @@ export default class ToastView extends BaseComponent {
 
 	componentDidMount() {
 		super.componentDidMount();
-		console.log('did mount')
 	}
 }
