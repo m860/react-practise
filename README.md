@@ -55,13 +55,14 @@ $ ./init.sh <folder> [options]
 
 - [ ] 添加flow语法检查
 - [x] Loading
+    - [ ] invoke with context not redux
     - [ ] add animation
 - [x] LoadingView
 - [x] Toast
     - [ ] add animation
 - [x] ToastView
 - [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
-- [x] init
+- [x] init.sh
 - [x] migration react-transition-group to v2
 - [ ] migration react-router to v4
     - [ ] add route transition
