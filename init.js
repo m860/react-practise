@@ -28,7 +28,7 @@ fsExtra.copySync(path.join(__dirname, '.babelrc'), path.join(targetFolder, '.bab
 console.log('copying .eslintrc')
 fsExtra.copySync(path.join(__dirname, '.eslintrc'), path.join(targetFolder, '.eslintrc'), {overwrite: true});
 console.log('copying package.json')
-fsExtra.copySync(path.join(__dirname, 'package.temp.json'), path.join(targetFolder, 'package.json'), {overwrite: true});
+fsExtra.copySync(path.join(__dirname, 'package.json'), path.join(targetFolder, 'package.json'), {overwrite: true});
 console.log('copying webpack.config.js')
 fsExtra.copySync(path.join(__dirname, 'webpack.config.js'), path.join(targetFolder, 'webpack.config.js'), {overwrite: true});
 console.log('copying src/')
@@ -37,8 +37,8 @@ fsExtra.copySync('./src', path.join(targetFolder, 'src'), {overwrite: true});
 //replace url & name
 console.log('replacing name & url')
 var fileStr = fs.readFileSync(path.join(targetFolder, 'package.json'), 'utf8');
-fileStr = fileStr.replace(/\$\{name\}/g, argv.name);
-fileStr = fileStr.replace(/\$\{url\}/g, argv.url);
+fileStr = fileStr.replace(/https:\/\/github\.com\/m860\/react-practise/g, argv.url);
+fileStr = fileStr.replace(/react\-practise/g, argv.name);
 fs.writeFileSync(path.join(targetFolder, 'package.json'), fileStr);
 console.log('init success');
 
