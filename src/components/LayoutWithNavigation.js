@@ -7,11 +7,6 @@ import config from "config";
 import LoadingView from './LoadingView'
 import {connect} from 'react-redux'
 
-@connect(({loading})=> {
-	return {
-		visibleLoading: loading.count > 0
-	}
-})
 export default class LayoutWithNavigation extends BaseComponent {
 	static propTypes = {
 		navOptions: PropTypes.object
@@ -23,12 +18,10 @@ export default class LayoutWithNavigation extends BaseComponent {
 	render() {
 		return (
 			<Layout>
-				<LoadingView visible={this.props.visibleLoading}>
-					<Nav {...this.props.navOptions}/>
-					<div className="wrapper">
-						{this.props.children}
-					</div>
-				</LoadingView>
+				<Nav {...this.props.navOptions}/>
+				<div className="wrapper">
+					{this.props.children}
+				</div>
 			</Layout>
 		);
 	}

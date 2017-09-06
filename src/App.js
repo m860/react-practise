@@ -15,6 +15,8 @@ import ReactDOM from "react-dom";
 import "./config/axios.config";
 import {persistStore, autoRehydrate} from "redux-persist";
 import ToastView from './components/ToastView'
+import LoadingView from './components/LoadingView'
+import Axios from './components/meta/Axios'
 
 export const store = createStore(
 	reducers,
@@ -28,10 +30,7 @@ export const store = createStore(
 let storeIsReady = false;
 
 persistStore(store, {
-	blacklist: [
-		'toast',
-		'loading'
-	]
+	blacklist: []
 }, ()=> {
 	storeIsReady = true;
 });
@@ -62,7 +61,11 @@ class App extends PureComponent {
 		return (
 			<Provider store={store}>
 				<ToastView>
-					{this.props.children}
+					<LoadingView isRoot={true}>
+						<Axios>
+							{this.props.children}
+						</Axios>
+					</LoadingView>
 				</ToastView>
 			</Provider>
 		);

@@ -10,19 +10,21 @@ import {showLoading, hideLoading} from '../ar/loading.ar'
 import {connect} from 'react-redux'
 // import {pushMessage} from '../ar/toast.ar'
 import PropTypes from 'prop-types'
+import ToastView from '../components/ToastView'
 
-@connect()
 export default class ToastDemo extends BasePage {
-	static contextTypes={
-		pushMessage:PropTypes.func
+	static contextTypes = {
+		pushMessage: PropTypes.func
 	};
+
 	render() {
 		return (
 			<LayoutWithNav>
-				<h5>Toast Demo</h5>
-				<div>
-					<button
-						onClick={()=>{
+				<ToastView>
+					<h5>Toast Demo</h5>
+					<div>
+						<button
+							onClick={()=>{
 							this.context.pushMessage({
 								type:"info",
 								message:`new message : ${Math.random()}`
@@ -34,9 +36,10 @@ export default class ToastDemo extends BasePage {
 							}))
 							*/
 						}}
-						type="button">show message
-					</button>
-				</div>
+							type="button">show message
+						</button>
+					</div>
+				</ToastView>
 			</LayoutWithNav>
 		);
 	}

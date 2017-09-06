@@ -6,22 +6,69 @@ import classnames from 'classnames'
 
 export default class LoadingView extends BaseComponent {
 	static propTypes = {
-		visible: PropTypes.bool,
 		style: PropTypes.object,
-		className: PropTypes.any
+		className: PropTypes.any,
+		isRoot: PropTypes.bool,
+		counter: PropTypes.number
 	};
 	static defaultProps = {
-		visible: false
+		isRoot: false,
+		counter: 0
 	};
+	static childContextTypes = {
+		loading: PropTypes.shape({
+			show: PropTypes.func,
+			hide: PropTypes.func
+		})
+	};
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			counter: props.counter
+		};
+	}
+
+	getChildContext() {
+		return {
+			loading: {
+				show: this.showLoading.bind(this),
+				hide: this.hideLoading.bind(this)
+			}
+		};
+	}
+
+	showLoading() {
+		this.updateState({
+			counter: {$set: this.state.counter + 1}
+		});
+	}
+
+	hideLoading() {
+		let counter = this.state.counter - 1;
+		if (counter < 0) {
+			counter = 0;
+		}
+		this.updateState({
+			counter: {$set: counter}
+		});
+	}
 
 	render() {
 		return (
-			<div className={classnames('loading-view',this.props.className)} style={this.props.style}>
+			<span className={classnames(this.props.isRoot?'':'loading-view',this.props.className)}
+				  style={this.props.style}>
 				{this.props.children}
-				{this.props.visible && <div className="visible-loading">
+				{this.state.counter > 0 && <div className="loading-active">
 					<Spinner></Spinner>
 				</div>}
-			</div>
+			</span>
 		);
+	}
+
+	componentWillReceiveProps(nextProps) {
+		this.updateState({
+			counter: {$set: nextProps.counter}
+		});
 	}
 }

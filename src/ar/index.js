@@ -3,9 +3,11 @@
  */
 import {combineReducers} from 'redux';
 //import toast from './toast.ar'
-import loading from './loading.ar'
+//import loading from './loading.ar'
+import authentication from './authentication.ar'
 
 export default combineReducers({
 	//toast,
-	loading
+	//loading
+	authentication
 })
