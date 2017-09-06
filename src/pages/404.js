@@ -1,13 +1,13 @@
 import React from 'react'
 import BasePage from './BasePage'
-import Layout from '../components/meta/Layout'
+import LayoutWithNavigation from '../components/LayoutWithNavigation'
 
 export default class NoMatch extends BasePage {
 	render() {
 		return (
-			<Layout>
+			<LayoutWithNavigation>
 				<div>404</div>
-			</Layout>
+			</LayoutWithNavigation>
 		);
 	}
 }

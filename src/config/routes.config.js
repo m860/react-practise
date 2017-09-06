@@ -1,4 +1,11 @@
 const routes = [{
+	path: 'httpdemo',
+	getComponent: async(location, callback)=> {
+		let module = await System.import("../pages/HttpDemo.js");
+		callback(null, module.default);
+	},
+	name: "Http Demo"
+},{
 	path: 'animationdemo',
 	getComponent: async(location, callback)=> {
 		let module = await System.import("../pages/AnimationDemo.js");

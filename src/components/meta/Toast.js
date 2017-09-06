@@ -3,7 +3,6 @@ import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
 import classnames from 'classnames'
 import {ToastMessageType} from '../../types'
-import {popMessage} from '../../ar/toast.ar'
 
 /**
  * Toast

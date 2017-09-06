@@ -12,7 +12,7 @@ import reducers from "./ar";
 import thunk from "redux-thunk";
 import React, {PureComponent} from "react";
 import ReactDOM from "react-dom";
-import "./config/axios.config";
+//import "./config/axios.config";
 import {persistStore, autoRehydrate} from "redux-persist";
 import ToastView from './components/ToastView'
 import LoadingView from './components/LoadingView'

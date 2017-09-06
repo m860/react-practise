@@ -6,7 +6,6 @@ import BasePage from "./BasePage";
 import LayoutWithNav from "../components/LayoutWithNavigation";
 import {Link} from "react-router";
 import LoadingView from '../components/LoadingView'
-import {showLoading, hideLoading} from '../ar/loading.ar'
 import {connect} from 'react-redux'
 // import {pushMessage} from '../ar/toast.ar'
 import PropTypes from 'prop-types'

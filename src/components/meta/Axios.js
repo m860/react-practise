@@ -8,6 +8,9 @@ export default class Axios extends BaseComponent {
 	static childContextTypes = {
 		http: PropTypes.func
 	};
+	static contextTypes = {
+		loading: PropTypes.object
+	};
 
 	getChildContext() {
 		return {
@@ -15,22 +18,22 @@ export default class Axios extends BaseComponent {
 		};
 	}
 
-	constructor(props){
+	constructor(props) {
 		super(props);
 		axios.defaults.baseURL = config.baseURL;
 		axios.defaults.timeout = config.requestTimeout;
-		axios.interceptors.request.use(function (configuration) {
-			//showLoading();
+		axios.interceptors.request.use((configuration)=> {
+			this.context.loading.show();
 			return configuration;
-		}, function (error) {
+		}, (error)=> {
 			return Promise.reject(error);
 		});
 
-		axios.interceptors.response.use(function (response) {
-			//hideLoading();
+		axios.interceptors.response.use((response)=> {
+			this.context.loading.hide();
 			return response;
-		}, function (error) {
-			//hideLoading();
+		}, (error)=> {
+			this.context.loading.hide();
 			return Promise.reject(error);
 		});
 	}
