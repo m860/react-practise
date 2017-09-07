@@ -64,6 +64,6 @@ $ ./init.sh <folder> [options]
 - [ ] 添加build platform的支持(web,mobile),组件支持.web.js和.mobile.js支持
 - [x] init.sh
 - [x] migration react-transition-group to v2
-- [ ] migration react-router to v4
-    - [ ] add route transition
+- [ ] ~~migration react-router to v4~~ 暂时不升级,v4 HashRouter不支持location.state和location.key
+    - [ ] ~~add route transition~~
 - [ ] migration webpack to v3
