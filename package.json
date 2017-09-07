@@ -53,7 +53,7 @@
     "yargs": "^8.0.2"
   },
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.16.2",
     "classnames": "^2.2.4",
     "font-awesome": "^4.7.0",
     "guid": "0.0.12",

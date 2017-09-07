@@ -66,4 +66,4 @@ $ ./init.sh <folder> [options]
 - [x] migration react-transition-group to v2
 - [ ] migration react-router to v4
     - [ ] add route transition
-- [ ] migration webpack to v2
+- [ ] migration webpack to v3
