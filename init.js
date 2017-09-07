@@ -23,6 +23,8 @@ if (!fsExtra.pathExistsSync(targetFolder)) {
 }
 
 //copy
+console.log('copying .gitignore')
+fsExtra.copySync(path.join(__dirname, '.gitignore'), path.join(targetFolder, '.gitignore'), {overwrite: true});
 console.log('copying .babelrc')
 fsExtra.copySync(path.join(__dirname, '.babelrc'), path.join(targetFolder, '.babelrc'), {overwrite: true});
 console.log('copying .eslintrc')
