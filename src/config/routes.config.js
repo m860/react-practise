@@ -1,63 +1,63 @@
 const routes = [{
 	path: 'httpdemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/HttpDemo.js");
+		let module = await System.import("../components/pages/HttpDemo.js");
 		callback(null, module.default);
 	},
 	name: "Http Demo"
 },{
 	path: 'toastdemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/ToastDemo.js");
+		let module = await System.import("../components/pages/ToastDemo.js");
 		callback(null, module.default);
 	},
 	name: "Toast Demo"
 },{
 	path: 'loadingviewdemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/LoadingViewDemo.js");
+		let module = await System.import("../components/pages/LoadingViewDemo.js");
 		callback(null, module.default);
 	},
 	name: "LoadingView Demo"
 },{
 	path: 'uploadfiledemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/UploadFileDemo.js");
+		let module = await System.import("../components/pages/UploadFileDemo.js");
 		callback(null, module.default);
 	},
 	name: "Upload File Demo"
 },{
 	path: 'paneldemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/PanelDemo.js");
+		let module = await System.import("../components/pages/PanelDemo.js");
 		callback(null, module.default);
 	},
 	name: "Panel Demo"
 },{
 	path: 'pagingdatatable',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/PagingDataTable.js");
+		let module = await System.import("../components/pages/PagingDataTable.js");
 		callback(null, module.default);
 	},
 	name: "Paging DataTable"
 },{
 	path: 'paginationdemo',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/PaginationDemo.js");
+		let module = await System.import("../components/pages/PaginationDemo.js");
 		callback(null, module.default);
 	},
 	name: "Pagination"
 },{
 	path: 'simpledatatable',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/SimpleDataTable.js");
+		let module = await System.import("../components/pages/SimpleDataTable.js");
 		callback(null, module.default);
 	},
 	name: "Simple DataTable"
 },{
 	path: '404',
 	getComponent: async(location, callback)=> {
-		let module = await System.import("../pages/404.js");
+		let module = await System.import("../components/pages/404.js");
 		callback(null, module.default);
 	},
 	name: "404"

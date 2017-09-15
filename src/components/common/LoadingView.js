@@ -1,10 +1,10 @@
 import React from "react";
-import BaseComponent from "./BaseComponent.js";
+import Base from "../Base.js";
 import PropTypes from "prop-types";
-import Spinner from './meta/Spinner'
+import Spinner from './Spinner'
 import classnames from 'classnames'
 
-export default class LoadingView extends BaseComponent {
+export default class LoadingView extends Base {
 	static propTypes = {
 		style: PropTypes.object,
 		className: PropTypes.any,

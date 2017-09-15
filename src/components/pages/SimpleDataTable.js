@@ -3,9 +3,9 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNavigation";
+import LayoutWithNav from "../common/LayoutWithNavigation";
 import {Link} from "react-router";
-// import DataTable from "../components/meta/DataTable";
+// import DataTable from "../components/common/DataTable";
 // import DataTable from "react-component-data-table/components/DataTable";
 import {DataTable} from "react-component-data-table";
 

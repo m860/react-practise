@@ -3,9 +3,9 @@
  */
 import React, {PureComponent} from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNavigation";
+import LayoutWithNav from "../common/LayoutWithNavigation";
 import {Link} from "react-router";
-import LoadingView from '../components/LoadingView'
+import LoadingView from '../common/LoadingView'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 

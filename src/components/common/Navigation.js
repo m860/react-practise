@@ -1,11 +1,11 @@
 import React from "react";
-import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
+import Base from "../Base";
 
 /**
  * Navigation - 导航栏
  * */
-export default class Navigation extends BaseComponent {
+export default class Navigation extends Base {
 	/**
 	 * @property {(?String|HtmlElement|React.node)} title [ THIS IS A TITLE ]
 	 * @property {(HtmlElement|React.node)} logo

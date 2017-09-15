@@ -1,11 +1,11 @@
 import React from "react";
-import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
+import Base from "../Base";
 
 /**
  * Spinner
  * */
-export default class Spinner extends BaseComponent {
+export default class Spinner extends Base {
 	static propTypes = {
 		loading: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
 		text: PropTypes.string,

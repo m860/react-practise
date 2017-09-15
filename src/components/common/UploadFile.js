@@ -1,8 +1,8 @@
 import React from "react";
-import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
+import Base from "../Base";
 
-export default class UploadFile extends BaseComponent {
+export default class UploadFile extends Base {
 	static propTypes = {
 		value: PropTypes.array,
 		onChange: PropTypes.func,

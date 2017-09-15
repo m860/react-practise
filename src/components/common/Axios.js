@@ -1,10 +1,10 @@
 import React from "react";
-import BaseComponent from "../BaseComponent.js";
+import Base from "../Base";
 import axios from 'axios'
 import config from 'config'
 import PropTypes from 'prop-types'
 
-export default class Axios extends BaseComponent {
+export default class Axios extends Base {
 	static childContextTypes = {
 		http: PropTypes.func
 	};

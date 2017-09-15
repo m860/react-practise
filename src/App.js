@@ -14,9 +14,9 @@ import React, {PureComponent} from "react";
 import ReactDOM from "react-dom";
 //import "./config/axios.config";
 import {persistStore, autoRehydrate} from "redux-persist";
-import ToastView from './components/ToastView'
-import LoadingView from './components/LoadingView'
-import Axios from './components/meta/Axios'
+import ToastView from './components/common/ToastView'
+import LoadingView from './components/common/LoadingView'
+import Axios from './components/common/Axios'
 
 export const store = createStore(
 	reducers,

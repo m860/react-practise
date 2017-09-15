@@ -3,9 +3,9 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNavigation";
+import LayoutWithNav from "../common/LayoutWithNavigation";
 import {Link} from "react-router";
-import UploadFile from '../components/meta/UploadFile'
+import UploadFile from '../common/UploadFile'
 import PropTypes from 'prop-types'
 
 export default class HttpDemo extends BasePage {

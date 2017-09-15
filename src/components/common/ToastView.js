@@ -1,6 +1,6 @@
 import React from 'react'
-import BaseComponent from './BaseComponent'
-import Toast from './meta/Toast'
+import Base from '../Base.js'
+import Toast from './Toast'
 import PropTypes from 'prop-types'
 // import {connect} from 'react-redux'
 //
@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 // 		messages: toast.messages
 // 	}
 // })
-export default class ToastView extends BaseComponent {
+export default class ToastView extends Base {
 	static childContextTypes = {
 		pushMessage: PropTypes.func
 	};

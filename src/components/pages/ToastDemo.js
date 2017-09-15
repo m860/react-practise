@@ -3,13 +3,13 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNavigation";
+import LayoutWithNav from "../common/LayoutWithNavigation";
 import {Link} from "react-router";
-import LoadingView from '../components/LoadingView'
+import LoadingView from '../common/LoadingView'
 import {connect} from 'react-redux'
 // import {pushMessage} from '../ar/toast.ar'
 import PropTypes from 'prop-types'
-import ToastView from '../components/ToastView'
+import ToastView from '../common/ToastView'
 
 export default class ToastDemo extends BasePage {
 	static contextTypes = {

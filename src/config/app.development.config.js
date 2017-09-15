@@ -4,7 +4,7 @@ export default {
 	// 启动页
 	index: ()=> {
 		return async(location, callback)=> {
-			let module = await System.import("../pages/Index");
+			let module = await System.import("../components/pages/Index.js");
 			callback(null, module.default);
 		}
 	},

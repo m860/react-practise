@@ -3,7 +3,7 @@
  */
 import React from "react";
 import BasePage from "./BasePage";
-import LayoutWithNav from "../components/LayoutWithNavigation";
+import LayoutWithNav from "../common/LayoutWithNavigation";
 import {Link} from "react-router";
 import {Panel,CollapsiblePanel} from 'react-component-panel'
 

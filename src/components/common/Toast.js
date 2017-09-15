@@ -1,13 +1,13 @@
 import React from "react";
-import BaseComponent from "../BaseComponent.js";
 import PropTypes from "prop-types";
 import classnames from 'classnames'
 import {ToastMessageType} from '../../types'
+import Base from "../Base";
 
 /**
  * Toast
  * */
-export default class Toast extends BaseComponent {
+export default class Toast extends Base {
 	static propTypes = {
 		style: PropTypes.object,
 		className: PropTypes.string,
